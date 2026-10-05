@@ -49,3 +49,15 @@ Image and audio references are not billed as video.
 These are prices before any discount. Estimates for other aspect ratios are approximate, because the docs give exact dimensions only for 16:9.
 
 Run the tests with `python -m unittest`.
+
+## Quick example (`main.py`)
+
+`main.py` uses the official SDK's `subscribe` to generate one 5-second, 720p, 16:9 video from the prompt "A cinematic scene at sunset". When the request completes it prints the video URL. For `failed`, `canceled` and `nsfw` (moderated) requests, and for API errors, it prints the reason and exits with a non-zero code.
+
+```bash
+pip install -r requirements.txt
+cp .env.example .env.local   # then set HF_KEY=key-id:key-secret in .env.local
+python main.py               # billable: about $2.31
+```
+
+`.env.local` is ignored by Git. A `HF_KEY` that is already set in the environment takes priority over the file.
