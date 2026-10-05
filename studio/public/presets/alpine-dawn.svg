@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16243f"/><stop offset="0.45" stop-color="#5a6f9a"/><stop offset="0.7" stop-color="#e8b9a6"/><stop offset="1" stop-color="#f6d9c4"/>
+    </linearGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3e3dc" stop-opacity="0"/><stop offset="0.5" stop-color="#f3e3dc" stop-opacity="0.75"/><stop offset="1" stop-color="#f3e3dc" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9aa8c4"/><stop offset="1" stop-color="#1c2740"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#sky)"/>
+  <circle cx="420" cy="420" r="34" fill="#fff0de" opacity="0.9"/>
+  <path d="M0 470 L120 270 L170 330 L260 190 L360 360 L420 300 L600 480 L600 520 L0 520 Z" fill="#4c5a7c"/>
+  <path d="M260 190 L232 240 L250 236 L262 252 L280 226 Z M120 270 L104 298 L122 292 L134 300 Z" fill="#f3eef0"/>
+  <rect y="400" width="600" height="140" fill="url(#mist)"/>
+  <path d="M0 520 L80 430 L150 480 L230 400 L330 500 L430 420 L520 470 L600 430 L600 560 L0 560 Z" fill="#2c3754"/>
+  <rect y="500" width="600" height="90" fill="url(#mist)" opacity="0.8"/>
+  <rect y="560" width="600" height="240" fill="url(#lake)"/>
+  <path d="M0 560 L80 620 L150 590 L230 640 L330 580 L430 630 L520 600 L600 620 L600 560 Z" fill="#2c3754" opacity="0.45"/>
+  <g stroke="#f6d9c4" stroke-linecap="round" opacity="0.55">
+    <line x1="380" y1="650" x2="460" y2="650" stroke-width="3"/><line x1="395" y1="672" x2="445" y2="672" stroke-width="2"/>
+  </g>
+  <g fill="#0f1628">
+    <path d="M40 800 L40 640 L22 680 L32 680 L14 720 L28 720 L8 760 L40 760 L40 640 L58 680 L48 680 L66 720 L52 720 L72 760 L40 760 Z"/>
+    <path d="M560 800 L560 610 L538 660 L550 660 L528 710 L546 710 L520 760 L600 760 L574 710 L592 710 L570 660 L582 660 Z"/>
+  </g>
+</svg>
