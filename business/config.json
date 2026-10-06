@@ -1,0 +1,39 @@
+{
+  "brand": "Insegna",
+  "titolare": "DA-COMPILARE",
+  "email": "DA-COMPILARE",
+  "telefono": "DA-COMPILARE",
+  "whatsapp": "DA-COMPILARE",
+  "citta": "DA-COMPILARE",
+  "fuso_orario": "Europe/Rome",
+  "link_prenotazione": "DA-COMPILARE",
+  "sito_base_url": "https://saybass.github.io/Test_Claude",
+  "ramo_sito": "claude/quirky-galileo-0qjnag",
+  "categorie": [
+    "Bar",
+    "Ristorante",
+    "Forno",
+    "Parrucchiere",
+    "Estetica",
+    "Negozio",
+    "Artigiano",
+    "B&B"
+  ],
+  "nuovi_contatti_al_giorno": 5,
+  "prezzi": {
+    "Vetrina": 290,
+    "Completo": 490,
+    "Tranquillità": 19
+  },
+  "obiettivo_euro": 1000,
+  "notion": {
+    "sede": "https://app.notion.com/p/3f1807be42e88111996ff0d65fcea893",
+    "agenda": "https://app.notion.com/p/3f1807be42e881e18c94dfd05963253e",
+    "clienti_data_source": "collection://f51b6cb9-dbf0-429d-9051-5088cf979921",
+    "dati_riservati": "https://app.notion.com/p/3f1807be42e8815aa2fecb24d09b05c9"
+  },
+  "calendario": {
+    "prefisso_eventi": "Insegna · ",
+    "durata_appuntamento_minuti": 30
+  }
+}

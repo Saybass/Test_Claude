@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="it">
+<head><meta charset="utf-8"><title>Ricevuta {{numero}} · {{cliente}}</title><style>{{stile}}</style></head>
+<body>
+<header>
+  <div class="logo">insegna<span>.</span></div>
+  <div class="meta">Ricevuta n. {{numero}}<br>Data: {{data}}</div>
+</header>
+
+<div class="parti">
+  <div><strong>Prestatore</strong><br>{{titolare}}<br>C.F. {{codice_fiscale}}<br>{{indirizzo}}</div>
+  <div><strong>Committente</strong><br>{{cliente}}<br>{{indirizzo_cliente}}<br>{{id_fiscale_cliente}}</div>
+</div>
+
+<h2>Ricevuta per prestazione di lavoro autonomo occasionale</h2>
+<table>
+  <tr><th>Descrizione</th><th class="num">Importo</th></tr>
+  <tr><td>Realizzazione sito web, pacchetto {{pacchetto}}</td><td class="num">{{lordo}} €</td></tr>
+  <tr><td>Ritenuta d'acconto (20%)</td><td class="num">{{ritenuta}} €</td></tr>
+  <tr class="totale"><td>Netto da pagare</td><td class="num">{{netto}} €</td></tr>
+</table>
+
+<p class="piccolo">Prestazione occasionale ai sensi dell'art. 2222 c.c., fuori dal campo di applicazione dell'IVA (art. 5 DPR 633/1972). {{nota_bollo}}</p>
+
+<div class="firme"><div></div><div>Firma<br><br>______________________<br>{{titolare}}</div></div>
+</body>
+</html>

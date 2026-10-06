@@ -6,3 +6,6 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Documenti con dati dei clienti: never commit.
+business/privato/

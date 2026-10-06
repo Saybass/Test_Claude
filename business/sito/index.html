@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Insegna · Siti web per attività locali</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="description" content="Siti web semplici e veloci per bar, negozi, artigiani e B&B. Online in 5 giorni, prezzo fisso.">
 <style>
   :root {
@@ -43,14 +44,20 @@
   .steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 30px; height: 30px;
                       border-radius: 50%; background: var(--accent); color: var(--accent-text);
                       display: grid; place-items: center; font-weight: 700; font-size: 15px; }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin: 10px 0; }
+  summary { font-weight: 600; cursor: pointer; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+  .portfolio { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .portfolio .card { flex: 1 1 260px; }
   footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+  footer a { color: inherit; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <div class="logo">insegna<span>.</span></div>
-    <a class="btn" href="#contatti">Chiedi un preventivo</a>
+    <a class="btn" href="DA-COMPILARE-PRENOTAZIONE">Prenota una chiamata</a>
   </header>
 
   <div class="hero">
@@ -108,6 +115,22 @@
   </section>
 
   <section>
+    <h2>Un esempio</h2>
+    <div class="portfolio">
+      <div class="card">
+        <h3>Forno del Borgo</h3>
+        <p class="muted">Sito vetrina per un panificio: prodotti con i prezzi, orari, pulsanti per chiamare e trovare il negozio. L'attività è inventata e serve a mostrare il risultato.</p>
+        <a class="btn ghost" href="../demo/">Apri l'esempio</a>
+      </div>
+      <div class="card">
+        <h3>La tua anteprima, gratis</h3>
+        <p class="muted">Prima di decidere ti prepariamo un'anteprima del sito della tua attività, senza impegno.</p>
+        <a class="btn" href="DA-COMPILARE-PRENOTAZIONE">Richiedila</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <h2>Come funziona</h2>
     <ol class="steps">
       <li><strong>Ci sentiamo per 15 minuti.</strong> Ci racconti la tua attività e scegli il pacchetto.</li>
@@ -117,17 +140,27 @@
     </ol>
   </section>
 
+  <section>
+    <h2>Domande frequenti</h2>
+    <details><summary>Devo pagare qualcosa prima?</summary><p>No. Paghi solo quando il sito è online e ti piace, con bonifico o in contanti.</p></details>
+    <details><summary>Il sito resta mio?</summary><p>Sì. Dopo il pagamento sito e dominio sono intestati a te. Non ci sono abbonamenti obbligatori.</p></details>
+    <details><summary>Posso cambiare orari e prezzi dopo?</summary><p>Certo. Con il servizio Tranquillità li aggiorniamo noi entro 48 ore. Altrimenti ti quotiamo ogni modifica a parte.</p></details>
+    <details><summary>Quanto costa tenerlo online?</summary><p>La pubblicazione è gratuita. Paghi solo il dominio, circa 10–15 € l'anno, direttamente al fornitore.</p></details>
+    <details><summary>Non ho foto professionali, è un problema?</summary><p>No. Vanno benissimo foto fatte col telefono: ti diamo qualche consiglio per farle bene.</p></details>
+  </section>
+
   <section id="contatti">
     <h2>Chiedi un preventivo gratuito</h2>
-    <p>Scrivici e ti rispondiamo entro un giorno lavorativo.</p>
+    <p>Prenota una chiamata di 15 minuti, oppure scrivici: ti rispondiamo entro un giorno lavorativo.</p>
     <div class="cta">
-      <!-- Sostituisci TUA-EMAIL e TUO-NUMERO prima di pubblicare -->
-      <a class="btn" href="mailto:TUA-EMAIL?subject=Preventivo%20sito">Scrivici un'email</a>
-      <a class="btn ghost" href="https://wa.me/TUO-NUMERO">WhatsApp</a>
+      <!-- I contatti li inserisce business/tools/applica_config.py da business/config.json -->
+      <a class="btn" href="DA-COMPILARE-PRENOTAZIONE">Prenota una chiamata</a>
+      <a class="btn ghost" href="mailto:DA-COMPILARE-EMAIL?subject=Preventivo%20sito">Email</a>
+      <a class="btn ghost" href="https://wa.me/DA-COMPILARE-WHATSAPP">WhatsApp</a>
     </div>
   </section>
 
-  <footer>© Insegna · Siti web per attività locali</footer>
+  <footer>© Insegna · Siti web per attività locali · DA-COMPILARE-TITOLARE · <a href="privacy.html">Privacy</a></footer>
 </div>
 </body>
 </html>

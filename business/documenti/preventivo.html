@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="it">
+<head><meta charset="utf-8"><title>Preventivo {{numero}} · {{cliente}}</title><style>{{stile}}</style></head>
+<body>
+<header>
+  <div class="logo">insegna<span>.</span></div>
+  <div class="meta">Preventivo n. {{numero}}<br>Data: {{data}}<br>Valido 30 giorni</div>
+</header>
+
+<div class="parti">
+  <div><strong>Da</strong><br>{{titolare}}<br>{{brand}} · Siti web per attività locali<br>{{email}} · {{telefono}}</div>
+  <div><strong>Per</strong><br>{{cliente}}<br>{{indirizzo_cliente}}</div>
+</div>
+
+<h2>Cosa realizziamo</h2>
+<table>
+  <tr><th>Descrizione</th><th class="num">Importo</th></tr>
+  <tr><td><strong>Pacchetto {{pacchetto}}</strong><br>{{descrizione_pacchetto}}</td><td class="num">{{prezzo}} €</td></tr>
+  <tr class="totale"><td>Totale</td><td class="num">{{prezzo}} €</td></tr>
+</table>
+<p class="piccolo">Prestazione occasionale non soggetta a IVA (art. 5 DPR 633/1972). Se il committente è un'impresa o un professionista, sull'importo si applica la ritenuta d'acconto del 20%.</p>
+
+<h2>Come lavoriamo</h2>
+<ol>
+  <li>Ci mandate testi, foto, logo, orari e prezzi.</li>
+  <li>Entro 5 giorni lavorativi ricevete un'anteprima online.</li>
+  <li>Sono inclusi due giri di modifiche.</li>
+  <li>Il sito va online e si paga solo a questo punto, con bonifico o contanti.</li>
+</ol>
+<p>Il dominio (per esempio www.vostraattivita.it, circa 10–15 € l'anno) è intestato a voi e lo pagate direttamente al fornitore. Dopo il pagamento il sito è vostro.</p>
+
+<div class="firme">
+  <div>Per {{brand}}<br><br>______________________<br>{{titolare}}</div>
+  <div>Per accettazione<br><br>______________________<br>{{cliente}}</div>
+</div>
+</body>
+</html>
