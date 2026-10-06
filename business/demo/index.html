@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forno del Borgo · Sito di esempio</title>
+<style>
+  :root {
+    --bg: #fffaf2; --surface: #ffffff; --text: #2b2118; --muted: #6b5a4a;
+    --accent: #8a4b14; --accent-text: #ffffff; --line: #eadfce;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1a140f; --surface: #241c15; --text: #f6ede2; --muted: #c4b29d;
+            --accent: #e0a060; --accent-text: #1a140f; --line: #3a2e23; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 17px/1.6 Georgia, "Times New Roman", serif; }
+  .ribbon { background: var(--text); color: var(--bg); text-align: center; font: 14px/1.4 system-ui, sans-serif; padding: 8px 16px; }
+  .ribbon a { color: inherit; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+  .hero { text-align: center; padding: 64px 0 40px; }
+  h1 { font-size: clamp(36px, 7vw, 60px); margin: 0 0 8px; }
+  .tag { color: var(--muted); font-size: 20px; margin: 0 0 28px; font-style: italic; }
+  .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; font-family: system-ui, sans-serif; }
+  .btn { background: var(--accent); color: var(--accent-text); padding: 12px 20px; border-radius: 999px;
+         text-decoration: none; font-weight: 600; }
+  section { padding: 36px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 28px; margin: 0 0 16px; }
+  .menu { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .item { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px;
+          display: flex; justify-content: space-between; gap: 12px; }
+  .item span:last-child { font-weight: 700; white-space: nowrap; }
+  table { width: 100%; border-collapse: collapse; font-family: system-ui, sans-serif; }
+  td { padding: 8px 0; border-bottom: 1px solid var(--line); }
+  td:last-child { text-align: right; }
+  footer { padding: 28px 0 48px; color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<div class="ribbon">Questo è un sito di esempio realizzato da Insegna. L'attività è inventata. <a href="../sito/">Vuoi un sito così?</a></div>
+<div class="wrap">
+  <div class="hero">
+    <h1>Forno del Borgo</h1>
+    <p class="tag">Pane a lievitazione naturale, dal 1987</p>
+    <div class="actions">
+      <a class="btn" href="#">Chiama</a>
+      <a class="btn" href="#">WhatsApp</a>
+      <a class="btn" href="#">Indicazioni</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>I nostri prodotti</h2>
+    <div class="menu">
+      <div class="item"><span>Pane casereccio (1 kg)</span><span>4,50 €</span></div>
+      <div class="item"><span>Focaccia all'olio (al taglio)</span><span>14 €/kg</span></div>
+      <div class="item"><span>Cornetto alla crema</span><span>1,30 €</span></div>
+      <div class="item"><span>Crostata di stagione</span><span>18 €</span></div>
+      <div class="item"><span>Taralli al finocchietto (250 g)</span><span>3,80 €</span></div>
+      <div class="item"><span>Torte su ordinazione</span><span>da 25 €</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Orari</h2>
+    <table>
+      <tr><td>Lunedì – Venerdì</td><td>6:30 – 13:30 · 16:30 – 19:30</td></tr>
+      <tr><td>Sabato</td><td>6:30 – 13:30</td></tr>
+      <tr><td>Domenica</td><td>7:00 – 12:30</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Dove siamo</h2>
+    <p>Via Roma 12, centro storico. Parcheggio gratuito in piazza.</p>
+  </section>
+
+  <footer>Forno del Borgo · Sito di esempio · Realizzato da Insegna</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insegna · Siti web per attività locali</title>
+<meta name="description" content="Siti web semplici e veloci per bar, negozi, artigiani e B&B. Online in 5 giorni, prezzo fisso.">
+<style>
+  :root {
+    --bg: #fbfaf7; --surface: #ffffff; --text: #1d1b18; --muted: #5f5a52;
+    --accent: #c2410c; --accent-text: #ffffff; --line: #e7e2d9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #171512; --surface: #211e1a; --text: #f3efe8; --muted: #b3ab9f;
+            --accent: #fb923c; --accent-text: #1d1b18; --line: #353029; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-weight: 800; font-size: 22px; letter-spacing: -0.5px; }
+  .logo span { color: var(--accent); }
+  .btn { display: inline-block; background: var(--accent); color: var(--accent-text);
+         padding: 12px 22px; border-radius: 10px; font-weight: 600; text-decoration: none; }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+  .hero { padding: 56px 0 40px; }
+  h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.1; margin: 0 0 16px; letter-spacing: -1px; }
+  .lead { font-size: 20px; color: var(--muted); max-width: 620px; margin: 0 0 28px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  section { padding: 40px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 28px; margin: 0 0 20px; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .card h3 { margin: 0 0 6px; }
+  .price { font-size: 34px; font-weight: 800; margin: 6px 0 12px; }
+  .price small { font-size: 15px; font-weight: 500; color: var(--muted); }
+  ul { padding-left: 20px; margin: 0; }
+  li { margin: 4px 0; }
+  .muted { color: var(--muted); }
+  .steps { counter-reset: s; list-style: none; padding: 0; }
+  .steps li { counter-increment: s; padding-left: 44px; position: relative; margin: 14px 0; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 30px; height: 30px;
+                      border-radius: 50%; background: var(--accent); color: var(--accent-text);
+                      display: grid; place-items: center; font-weight: 700; font-size: 15px; }
+  footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">insegna<span>.</span></div>
+    <a class="btn" href="#contatti">Chiedi un preventivo</a>
+  </header>
+
+  <div class="hero">
+    <h1>La tua attività, finalmente online.<br>In 5 giorni, a prezzo fisso.</h1>
+    <p class="lead">Creiamo siti semplici e veloci per bar, ristoranti, negozi, artigiani e B&amp;B. Tu ci mandi testi e foto, al resto pensiamo noi. Paghi solo quando il sito ti piace.</p>
+    <div class="cta">
+      <a class="btn" href="#prezzi">Vedi i prezzi</a>
+      <a class="btn ghost" href="../demo/">Guarda un esempio</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>Perché serve un sito</h2>
+    <div class="grid">
+      <div class="card"><h3>Ti trovano su Google</h3><p class="muted">Chi cerca "panificio vicino a me" trova te, con orari, indirizzo e telefono sempre aggiornati.</p></div>
+      <div class="card"><h3>Ti scrivono con un tocco</h3><p class="muted">Pulsanti per WhatsApp, chiamata e indicazioni stradali, pensati per il telefono.</p></div>
+      <div class="card"><h3>Il sito è tuo</h3><p class="muted">Niente commissioni sugli ordini e niente piattaforme che cambiano le regole.</p></div>
+    </div>
+  </section>
+
+  <section id="prezzi">
+    <h2>Prezzi chiari, senza sorprese</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Vetrina</h3>
+        <div class="price">290 € <small>una tantum</small></div>
+        <ul>
+          <li>Una pagina con chi sei, cosa offri, orari e contatti</li>
+          <li>Pulsanti WhatsApp, chiamata e mappa</li>
+          <li>Perfetto su telefono e computer</li>
+          <li>Online in 5 giorni lavorativi</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Completo</h3>
+        <div class="price">490 € <small>una tantum</small></div>
+        <ul>
+          <li>Fino a 5 pagine: menu o listino, galleria, chi siamo, contatti</li>
+          <li>Configurazione della scheda Google Business</li>
+          <li>Modulo di contatto</li>
+          <li>Due giri di modifiche inclusi</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Tranquillità</h3>
+        <div class="price">19 € <small>al mese, facoltativo</small></div>
+        <ul>
+          <li>Aggiornamenti di orari, menu e prezzi</li>
+          <li>Risposta entro 48 ore</li>
+          <li>Disdici quando vuoi</li>
+        </ul>
+      </div>
+    </div>
+    <p class="muted">Il dominio (per esempio www.tuonegozio.it) costa circa 10–15 € l'anno ed è intestato a te.</p>
+  </section>
+
+  <section>
+    <h2>Come funziona</h2>
+    <ol class="steps">
+      <li><strong>Ci sentiamo per 15 minuti.</strong> Ci racconti la tua attività e scegli il pacchetto.</li>
+      <li><strong>Ci mandi testi e foto.</strong> Vanno bene anche quelle fatte col telefono.</li>
+      <li><strong>Ricevi un'anteprima.</strong> Chiedi le modifiche che vuoi.</li>
+      <li><strong>Il sito va online.</strong> Paghi solo a questo punto.</li>
+    </ol>
+  </section>
+
+  <section id="contatti">
+    <h2>Chiedi un preventivo gratuito</h2>
+    <p>Scrivici e ti rispondiamo entro un giorno lavorativo.</p>
+    <div class="cta">
+      <!-- Sostituisci TUA-EMAIL e TUO-NUMERO prima di pubblicare -->
+      <a class="btn" href="mailto:TUA-EMAIL?subject=Preventivo%20sito">Scrivici un'email</a>
+      <a class="btn ghost" href="https://wa.me/TUO-NUMERO">WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>© Insegna · Siti web per attività locali</footer>
+</div>
+</body>
+</html>
