@@ -101,8 +101,10 @@ def build_input(mode, **fields):
     return body
 
 
-def estimate_cost(duration, resolution="720p", input_video_seconds=0, video_input=False):
+def estimate_cost(duration, resolution="720p", input_video_seconds=0, video_input=False, discount=0):
     """Estimate cost in USD as ceil(w * h * total_seconds * 24 / 1024) tokens.
+
+    discount is the account discount in percent off list price (e.g. 15).
 
     Video input (edit, extend, reference with videos) bills its own duration
     too, at 0.6x the token rate. Exact for 16:9 output; other aspect ratios
@@ -111,7 +113,7 @@ def estimate_cost(duration, resolution="720p", input_video_seconds=0, video_inpu
     width, height = DIMENSIONS_16_9[resolution]
     tokens = math.ceil(width * height * (input_video_seconds + duration) * 24 / 1024)
     rate = PRICE_PER_1K_TOKENS[resolution] * (VIDEO_INPUT_RATE_MULTIPLIER if video_input else 1)
-    return tokens, tokens / 1000 * rate
+    return tokens, tokens / 1000 * rate * (1 - discount / 100)
 
 
 def credentials():
@@ -194,6 +196,9 @@ def parse_args(argv):
             sp.add_argument("--input-video-seconds", type=float, default=0,
                             help="total length of input videos, for the cost estimate")
         sp.add_argument("--no-audio", action="store_true", help="disable audio generation")
+        sp.add_argument("--discount", type=float, default=float(os.environ.get("HF_DISCOUNT") or 0),
+                        help="account discount in percent off list price, for the cost estimate "
+                             "(default $HF_DISCOUNT or 0)")
         sp.add_argument("--dry-run", action="store_true",
                         help="print the request body and cost estimate without uploading or calling the API")
 
@@ -246,9 +251,10 @@ def main(argv=None):
         print("Cost estimate skipped: pass --input-video-seconds to include video input.",
               file=sys.stderr)
     else:
-        tokens, cost = estimate_cost(duration, resolution, input_seconds, video_input)
+        tokens, cost = estimate_cost(duration, resolution, input_seconds, video_input, args.discount)
         approx = "" if body.get("aspect_ratio", "16:9") == "16:9" and mode != "edit" else " (approximate)"
-        print(f"Estimated cost: ${cost:.4f} for {tokens} video tokens{approx}", file=sys.stderr)
+        off = f" after {args.discount:g}% discount" if args.discount else ""
+        print(f"Estimated cost: ${cost:.4f}{off} for {tokens} video tokens{approx}", file=sys.stderr)
 
     if dry:
         print(json.dumps({"model": model_id(mode), "input": body}, indent=2))

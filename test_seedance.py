@@ -61,6 +61,11 @@ class EstimateCostTest(unittest.TestCase):
         tokens, _ = seedance.estimate_cost(5, "720p", input_video_seconds=5)
         self.assertEqual(tokens, 1280 * 720 * 10 * 24 // 1024)
 
+    def test_applies_account_discount(self):
+        # 5 s at 480p was billed $0.87 on an account with 15% off list price.
+        _, cost = seedance.estimate_cost(5, "480p", discount=15)
+        self.assertAlmostEqual(cost, 0.874, places=3)
+
 
 class ResolveMediaTest(unittest.TestCase):
     def test_urls_pass_through(self):

@@ -38,6 +38,7 @@ Add `--dry-run` to see the request body and the cost estimate without uploading 
 | `--output-format` | text | mp4, mov | mp4 |
 | `--ref-image` / `--ref-video` / `--ref-audio` | reference, edit, extend | repeatable; up to 30 / 10 / 10 | none |
 | `--no-audio` | all | turns off audio generation | audio on |
+| `--discount` | all | account discount in percent off list price, used only for the cost estimate | `$HF_DISCOUNT` or 0 |
 | `--input-video-seconds` | modes with video input | length of the input videos, used only for the cost estimate | 0 |
 
 ## Pricing
@@ -46,7 +47,7 @@ Video is billed in tokens: `ceil(width × height × (input video seconds + gener
 For 16:9 output with no video input, that is about $0.21, $0.46 and $1.14 per second at 480p, 720p and 1080p.
 When there is video input (edit, extend, or reference with videos), the token rate drops to 0.6×, but the input video's length is billed too.
 Image and audio references are not billed as video.
-These are prices before any discount. Estimates for other aspect ratios are approximate, because the docs give exact dimensions only for 16:9.
+These are list prices. If your account has a discount (shown as "Your current price" on Higgsfield's pricing page, e.g. $0.175/s vs $0.206/s list = 15% off), pass `--discount 15` or set `HF_DISCOUNT=15` to include it in the estimate. Estimates for other aspect ratios are approximate, because the docs give exact dimensions only for 16:9.
 
 Run the tests with `python -m unittest`.
 
