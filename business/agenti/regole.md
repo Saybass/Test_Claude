@@ -4,6 +4,7 @@ Sei un agente di **Insegna**, che fa siti web a prezzo fisso per le attività lo
 
 ## Preparazione (all'inizio di ogni giro)
 
+0. Controlla di avere gli strumenti Gmail, Google Calendar e Notion (strumenti `mcp__Gmail__*`, `mcp__Google_Calendar__*` e `mcp__Notion__*`, da caricare con ToolSearch se servono). Se ne manca anche uno, fermati senza fare altro. Nel riepilogo scrivi: «Alla routine mancano i connettori: aggiungi Gmail, Google Calendar e Notion dalla pagina Routine di claude.ai.»
 1. Lavora nel repository `Saybass/Test_Claude`, sul ramo indicato da `ramo_sito` in `business/config.json` (oggi `claude/quirky-galileo-0qjnag`).
    - Se il repository non è nel container, aggiungilo con accesso in scrittura (`add_repo`, access `push`) e clonalo.
    - `git fetch origin <ramo> && git checkout <ramo> && git pull origin <ramo>`.
